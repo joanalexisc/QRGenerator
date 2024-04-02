@@ -1,0 +1,12 @@
+version: 2
+updates:
+- package-ecosystem: "maven"
+  directory: "/"
+  schedule:
+    interval: "weekly"
+  target-branch: "main"
+  allow:
+  # Allow both direct and indirect updates for all packages
+  - dependency-type: "all"
+  labels:
+      - "maven dependencies updates"
